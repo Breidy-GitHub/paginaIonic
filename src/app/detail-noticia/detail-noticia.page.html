@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Detalle de las noticias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+    <ion-item >
+      <div >
+        <ion-card>
+          <ion-item>
+            <h3>{{nombreCancion}}</h3>
+            <span slot="end" (click)="back()"><ion-icon name="arrow-back-outline"></ion-icon></span>
+          </ion-item>
+          
+  
+          <ion-card-header>
+            <ion-toolbar>
+              <span><h1>Nombre:  {{nombreCancion}}</h1></span>  
+            </ion-toolbar>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <H3>{{grupo}}</H3>
+          </ion-card-content>
+          
+          <ion-col size="6">
+            <video controls width="450px" height="auto"><source src="{{direcionVideo}}"></video>
+            <br>
+          </ion-col>
+          <audio controls><source src="{{direcionAudio}}"></audio>
+
+        </ion-card>
+      </div>
+  </ion-item>
+</ion-content>
